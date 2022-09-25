@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Сайт</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body style="margin:0;">
-    <div style="max-width:800px; margin: 0 auto; margin-top:20px; padding:10px;">
-        <div style="background-color:#ccc;">
-
-            <img style="float:left; margin:10px; width:100px; height:100px;" src="image.png" alt="картинка" />
-        </div>
-
-        <div style="background-color:#ddd; padding:10px;">
-            Название
-        </div>
-    </div>
-    <div style="max-width:800px; margin: 0 auto; margin-top:20px; padding:10px;">
+    <header>
+        <img style="float: left; padding: 0 0 0 510px; margin: 10px; width: 100px; height: 100px;" src="image.png" alt="Описание картинки для скрин-ридеров и поисковиков" />
+        <h4>Лучшее название</h4>
+    </header>
+    <nav>
+        <a href="#links">Список ссылок</a>
+        <a href="#mainTable">Таблица</a>
+        <a href="#mainForm">Форма</a>
+    </nav>
+    <main>
 
         <h2>Список ссылок</h2>
         <ol id="links">
@@ -44,7 +44,7 @@
             <li><p>контекстная в тексте <a href="http://htmlbook.ru/html/p">абзаца</a></p></li>
             <li>
                 <a href="images/image.jpg" title="ссылка-изображение">
-                    <img id="linkImg" src="images/image.jpg" alt="Цветок" />
+                    <img id="linkImg" src="images/image.jpg" alt="Цветок" style="width:300px;height:200px" />
                 </a>
             </li>
             <li>
@@ -62,40 +62,6 @@
             <li><a href="/index.html">сокращенная на главную</a></li>
             <li><a href="/2.html">сокращенная ссылка на внутреннюю</a></li>
         </ol>
-        <div style="max-width:800px; margin: 0 auto; margin-top:20px; padding:10px;">
-            <h3>Таблица</h3>
-        </div>
-        <table>
-            <tr>
-                <th><a style="background-color: papayawhip; font-weight: bold;">Колонка 1</a></th>
-                <th><a style="background-color: papayawhip; font-weight: bold;">Колонка 2</a></th>
-                <th><a style="background-color: papayawhip; font-weight: bold;">Колонка 3</a></th>
-
-            </tr>
-            <tr>
-                <td colspan="3"><a style="background-color: paleturquoise; font-weight: bold;">Ячейка 11 объединенная с 12 и с 13</a></td>
-            </tr>
-            <tr>
-                <td><a style="background-color: plum; font-weight: bold;">Ячейка 21</a></td>
-                <td><a style="background-color: plum; font-weight: bold;">Ячейка 22</a></td>
-                <td><a style="background-color: plum; font-weight: bold;">Ячейка 23</a></td>
-            </tr>
-            <tr>
-
-                <td><a style="background-color: paleturquoise; font-weight: bold;">Ячейка 31</a></td>
-                <td><a style="background-color: paleturquoise; font-weight: bold;">Ячейка 32</a></td>
-                <td><a style="background-color: paleturquoise; font-weight: bold;">Ячейка 33</a></td>
-            </tr>
-            <tr>
-                <td><a style="background-color: plum; font-weight: bold;">Ячейка 41</a></td>
-                <td><a style="background-color: plum; font-weight: bold;">Ячейка 42</a></td>
-                <td><a style="background-color: plum; font-weight: bold;">Ячейка 43</a></td>
-            </tr>
-            <tr>
-                <td colspan="2"><a style="background-color: paleturquoise; font-weight: bold;">Ячейка 51 объединенная с 52</a></td>
-                <td><a style="background-color: paleturquoise; font-weight: bold;">Ячейка 53</a></td>
-            </tr>
-        </table>
 
 
 
@@ -110,10 +76,51 @@
 
 
 
-        <h1>Форма</h1>
+
+
+        <t1>
+            <h1>Таблица</h1>
+
+            <table id="mainTable">
+                <tr>
+                    <th>Колонка 1</th>
+                    <th>Колонка 2</th>
+                    <th>Колонка 3</th>
+
+                </tr>
+                <tr>
+                    <td colspan="3">Ячейка 11 объединенная с 12 и с 13</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 21</td>
+                    <td>Ячейка 22</td>
+                    <td>Ячейка 23</td>
+                </tr>
+                <tr>
+
+                    <td>Ячейка 31</td>
+                    <td>Ячейка 32</td>
+                    <td>Ячейка 33</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 41</td>
+                    <td>Ячейка 42</td>
+                    <td rowspan="2">Ячейка 43 объединенная с 53</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Ячейка 51 объединенная с 52</td>
+
+                </tr>
+            </table>
+        </t1>
+        <h4>
+        </h4>
+
+        <h3>Форма</h3>
 
         <form action="/"
-              method="POST">
+              method="POST"
+              id="mainForm">
 
             <label>
                 Имя:<br />
@@ -204,6 +211,12 @@
             </label><br />
             <input type="submit" value="Отправить" />
         </form>
-    </div>
+    </main>
+    <footer>
+        <div id="footerDiv">
+            <a id="footerLink" href="https://github.com/s0172067">(c) Бондарюк Михаил 2022</a>
+            
+        </div>
+    </footer>
 </body>
 </html>
